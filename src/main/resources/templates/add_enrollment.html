@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Enrollment</title>
+</head>
+<body>
+    <h1>Add Enrollment</h1>
+    <form method="post" th:object="${enrollment}" th:action="@{/enrollments/add}">
+        <label>Faculty User ID: <input type="number" th:field="*{faculty_user_id}" /></label><br />
+        <label>Learner User ID: <input type="number" th:field="*{learner_user_id}" /></label><br />
+        <label>Course ID: <input type="number" th:field="*{course_id}" /></label><br />
+        <input type="submit" value="Add Enrollment" />
+    </form>
+    <a href="/enrollments">Back to List</a>
+</body>
+</html>

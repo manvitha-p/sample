@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Course</title>
+</head>
+<body>
+    <h1>Edit Course</h1>
+    <form method="post" th:object="${course}" th:action="@{/courses/edit/{id}(id=${course.id})}">
+        <label>Course ID: <input type="text" th:field="*{course_id}" /></label><br />
+        <label>Course Name: <input type="text" th:field="*{course_name}" /></label><br />
+        <label>Start Date: <input type="date" th:field="*{start_dt}" /></label><br />
+        <label>End Date: <input type="date" th:field="*{end_dt}" /></label><br />
+        <input type="submit" value="Save" />
+    </form>
+    <a href="/courses">Back to List</a>
+</body>
+</html>

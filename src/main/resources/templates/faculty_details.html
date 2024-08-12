@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Faculty Details</title>
+</head>
+<body>
+<h1>Faculty Details</h1>
+    <p>ID: <span th:text="${faculty.id}"></span></p>
+    <p>User ID: <span th:text="${faculty.user_id}"></span></p>
+    <p>First Name: <span th:text="${faculty.firstname}"></span></p>
+    <p>Last Name: <span th:text="${faculty.lastname}"></span></p>
+    <a href="/faculty">Back to List</a>
+</body>
+</html>

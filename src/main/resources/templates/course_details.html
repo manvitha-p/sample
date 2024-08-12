@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Course Details</title>
+</head>
+<body>
+    <h1>Course Details</h1>
+    <p>ID: <span th:text="${course.id}"></span></p>
+    <p>Course ID: <span th:text="${course.course_id}"></span></p>
+    <p>Course Name: <span th:text="${course.course_name}"></span></p>
+    <p>Start Date: <span th:text="${course.start_dt}"></span></p>
+    <p>End Date: <span th:text="${course.end_dt}"></span></p>
+    <a href="/courses">Back to List</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Learners List</title>
+</head>
+<body>
+<h1>Learners List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="learner : ${learnersList}">
+            <td th:text="${learner.id}"></td>
+            <td th:text="${learner.user_id}"></td>
+            <td th:text="${learner.firstname}"></td>
+            <td th:text="${learner.lastname}"></td>
+            <td>
+                <a th:href="@{/learners/{id}(id=${learner.id})}">View</a>
+                <a th:href="@{/learners/edit/{id}(id=${learner.id})}">Edit</a>
+                <a th:href="@{/learners/delete/{id}(id=${learner.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <a href="/learners/add">Add Learner</a>
+</body>
+</html>
